@@ -5,9 +5,26 @@
 <mapper namespace="kr.co.mysqljava.user.UserMapper">
 
 	
-	<insert id="registUser" parameterType="UserVO">
+	<insert id="registUser" parameterType="UserVO"  >
 	INSERT INTO tb_member(uId,uPass,uEmail,uAdress)
 	VALUES(#{uId},#{uPass},#{uEmail},#{uAdress})
 	</insert>
 
+	<select id="selectUser" resultType="UserVO">
+	SELECT * FROM tb_member where uId='rlatpgns'
+	</select>
+
+	<select id="selectUserList" resultType="UserVO">
+	SELECT * FROM tb_member
+	</select>
+	
+	<select id="selectUser2" resultType="UserVO" parameterType="int">
+	SELECT * FROM tb_member where uNumber=#{uNumber}
+	</select>
+
+	<update id="updateAction" parameterType="UserVO">
+		update tb_member 
+		set uId=#{uId}, uPass=#{uPass}, uEmail=#{uEmail}, uAdress=#{uAdress} 
+		where uNumber=#{uNumber}
+	</update>
 </mapper>

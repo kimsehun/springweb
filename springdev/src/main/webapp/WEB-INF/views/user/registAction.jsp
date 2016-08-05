@@ -8,11 +8,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href='<c:url value="/resources/css/board.css" />' type="text/css" />
-<script type="text/javascript" src='<c:url value="/resources/js/jquery-2.0.2.js" />'></script>
 </head>
 <body>
-축하합니다. 가입되셨습니다.<br/>
+${userVO.uId}님 축하합니다. 가입되셨습니다.<br/>
 아래 항목을 확인하세요<br/>
 </body>
 </html>

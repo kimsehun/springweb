@@ -3,10 +3,12 @@ package kr.co.mysqljava.user;
 import java.io.Serializable;
 
 public class UserVO implements Serializable {
+	private int uNumber;
 	private String uId;
 	private String uPass;
 	private String uEmail;
 	private String uAdress;
+	private String uDate;
 	
 	public String getuId() {
 		return uId;
@@ -33,9 +35,23 @@ public class UserVO implements Serializable {
 		this.uAdress = uAdress;
 	}
 	
+	public int getuNumber() {
+		return uNumber;
+	}
+	public void setuNumber(int uNumber) {
+		this.uNumber = uNumber;
+	}
+	public String getuDate() {
+		return uDate;
+	}
+	public void setuDate(String uDate) {
+		this.uDate = uDate;
+	}
 	@Override
 	public String toString() {
-		return "UserVO [uId=" + uId + ", uPass=" + uPass + ", uEmail=" + uEmail
-				+ ", uAdress=" + uAdress + "]";
+		return "UserVO [uNumber=" + uNumber + ", uId=" + uId + ", uPass="
+				+ uPass + ", uEmail=" + uEmail + ", uAdress=" + uAdress
+				+ ", uDate=" + uDate + "]";
 	}
+
 }
