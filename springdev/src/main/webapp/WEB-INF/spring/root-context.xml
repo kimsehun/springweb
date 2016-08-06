@@ -8,7 +8,7 @@
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://192.168.0.13:3306/basicjsp"/>
+        <property name="url" value="jdbc:mysql://192.168.0.32:3306/basicjsp"/>
         <property name="username" value="jspid"/>
         <property name="password" value="jsppass"/>
     </bean>
